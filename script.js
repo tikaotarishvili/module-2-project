@@ -1,3 +1,11 @@
+const burgerMenu = document.querySelector(".burger-menu");
+const sidebar = document.querySelector(".sidebar");
+
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("open");
+  sidebar.classList.toggle("open");
+});
+
 const swipeContainer = document.querySelector(".swipe-container");
 const leftHint = document.querySelector(".left-hint");
 const rightHint = document.querySelector(".right-hint");

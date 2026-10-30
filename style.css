@@ -1,3 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Luckiest+Guy&display=swap");
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +49,7 @@ body {
   margin-right: 72px;
   h1 {
     color: #f8b319;
+    font: 400 32px "luckiest guy";
   }
 }
 
@@ -49,6 +74,7 @@ body {
   padding-left: 38px;
   h3 {
     color: #f9f9f9ab;
+    font: 700 18px "lato";
   }
 }
 
@@ -59,6 +85,10 @@ body {
   text-decoration: none;
   color: #f9f9f9;
   transition: 0.3s;
+}
+
+.sidebar-item span {
+  font: 600 18px "lato";
 }
 
 .sidebar-item:hover {
@@ -85,11 +115,14 @@ body {
   a {
     text-decoration: none;
     color: #f9f9f9;
-    font-size: 24px;
+    font: 600 24px "lato";
     text-wrap: nowrap;
     padding-bottom: 18px;
     transition: 0.3;
   }
+}
+.navbar a:nth-child(2) {
+  font: 800 24px "lato";
 }
 
 .navbar a:hover {
@@ -155,6 +188,7 @@ body {
   background: #f9f9f933;
   backdrop-filter: blur(10px);
   cursor: pointer;
+  color: #f9f9f9;
 }
 
 .pervious-btn {
@@ -168,6 +202,13 @@ body {
   right: 20px;
 }
 
+.pervious-btn:hover {
+  color: #f8b319;
+}
+
+.next-btn:hover {
+  color: #f8b319;
+}
 .movie-actions {
   display: flex;
   align-items: center;
@@ -188,13 +229,18 @@ body {
   background-color: #f9f9f933;
   backdrop-filter: blur(10px);
   cursor: pointer;
+  color: #f9f9f9;
+}
+.watchlist:hover {
+  color: #f8b319;
 }
 
 .watchlist span {
-  font-family: "Lato";
-  font-weight: 800;
-  font-size: 18px;
+  font: 800 18px "lato";
   color: #f9f9f9;
+}
+.watchlist span:hover {
+  color: #f8b319;
 }
 
 .hero-indicators {
@@ -222,13 +268,16 @@ body {
 
 .watch-now {
   padding: 19px 47px;
-  font-size: 18px;
-  font-weight: 800;
+  font: 800 18px "lato";
   color: black;
   background-color: #f8b319;
   border: none;
   border-radius: 15px;
   text-decoration: none;
+}
+
+.watch-now:hover {
+  opacity: 0.7;
 }
 
 /* movies section */
@@ -246,6 +295,7 @@ body {
 
 .movies-container {
   display: flex;
+  flex-direction: row;
   gap: 24px;
   width: 100%;
   max-width: 770px;
@@ -315,6 +365,10 @@ body {
   background-color: #f9f9f933;
   backdrop-filter: blur(10px);
   cursor: pointer;
+  color: #f9f9f9;
+}
+.add-btn:hover {
+  color: #f8b319;
 }
 
 .info-btn {
@@ -327,12 +381,17 @@ body {
   cursor: pointer;
 }
 
+.info-btn:hover {
+  opacity: 0.7;
+}
+
 /* top rated movies section */
 .top-rated-movies {
   display: flex;
   flex-direction: column;
   margin-left: 143px;
   max-width: 960px;
+  margin-bottom: 50px;
 }
 .top-rated-movies h2 {
   font: 800 48px "lato";
@@ -437,6 +496,9 @@ body {
 .swipe-hint span {
   cursor: pointer;
   user-select: none;
+  font: 600 20px "lato";
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .left-hint:hover {
@@ -708,4 +770,548 @@ body {
   color: #171717;
   font-size: 11px;
   font-weight: 700;
+}
+
+.bottom-part {
+  font: 400 32px "luckiest guy";
+  color: #f8b319;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   LAPTOP - 1024px
+========================= */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+  .sidebar-logo {
+    padding: 40px 15px 30px;
+  }
+
+  .sidebar-content {
+    gap: 40px;
+  }
+
+  .main-content {
+    padding: 40px 25px 60px;
+    min-width: 0;
+  }
+
+  .top-bar {
+    gap: 20px;
+    padding-right: 0;
+  }
+
+  .navbar {
+    gap: 20px;
+  }
+
+  .navbar a {
+    font-size: 19px;
+  }
+
+  .search-box {
+    padding: 12px 15px;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .movies-container {
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: wrap;
+  }
+
+  .top-rated-movies {
+    margin-left: 0;
+    padding: 0 25px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .swipe-container {
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   TABLET - 768px
+========================= */
+
+@media (max-width: 768px) {
+  .full-page {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar */
+
+  .sidebar {
+    display: none;
+  }
+
+  /* Main content */
+
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 24px 50px;
+  }
+
+  .top-bar {
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .navbar a:nth-child(2) {
+    font-size: 18px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  /* Hero */
+
+  .hero {
+    max-width: 100%;
+    min-height: 300px;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+    top: 25px;
+    left: 25px;
+  }
+
+  .pervious-btn {
+    top: 45%;
+    left: 10px;
+  }
+
+  .next-btn {
+    top: 45%;
+    right: 10px;
+  }
+
+  .movie-actions {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .watchlist {
+    padding: 13px 15px;
+  }
+
+  .watch-now {
+    padding: 14px 25px;
+  }
+
+  /* Movies */
+
+  .movies-section {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+
+  .movies-section h2 {
+    font-size: 26px;
+  }
+
+  .movies-container {
+    max-width: 100%;
+  }
+
+  /* Top rated movies */
+
+  .top-rated-movies {
+    margin-left: 0;
+    padding: 0 24px;
+    width: 100%;
+  }
+
+  .top-rated-movies h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .swipe-container {
+    gap: 20px;
+  }
+
+  .swipe-item {
+    flex: 0 0 260px;
+    width: 260px;
+    height: auto;
+  }
+
+  .swipe-card {
+    width: 260px;
+    height: 370px;
+  }
+
+  /* Movie modal */
+
+  .movie-window {
+    height: 85vh;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .movie-details {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 20px;
+    padding: 80px 30px 30px;
+  }
+
+  .featured-poster {
+    max-width: 180px;
+  }
+
+  .movie-details .movie-actions {
+    position: static;
+    margin-top: 15px;
+  }
+}
+
+/* =========================
+   MOBILE - 480px
+========================= */
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 20px 15px 40px;
+  }
+
+  /* Navbar */
+
+  .top-bar {
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .navbar a,
+  .navbar a:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .search-box {
+    padding: 12px 15px;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 250px;
+    border-radius: 12px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .next-btn,
+  .pervious-btn {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .movie-actions {
+    left: 10px;
+    right: 10px;
+    bottom: 12px;
+  }
+
+  .watchlist {
+    gap: 7px;
+    padding: 12px;
+  }
+
+  .watchlist span {
+    font-size: 12px;
+  }
+
+  .watch-now {
+    padding: 12px 17px;
+    font-size: 13px;
+  }
+
+  .hero-indicators {
+    padding: 6px 8px;
+    gap: 5px;
+  }
+
+  /* Movies section */
+
+  .movies-section {
+    margin-top: 35px;
+  }
+
+  .movies-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .movies-container {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  /* Top rated movies */
+
+  .top-rated-movies {
+    padding: 0 15px;
+    margin-bottom: 35px;
+  }
+
+  .top-rated-movies h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .swipe-container {
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  .swipe-item {
+    flex: 0 0 230px;
+    width: 230px;
+  }
+
+  .swipe-card {
+    width: 230px;
+    height: 330px;
+  }
+
+  .swipe-card-info h3 {
+    font-size: 23px;
+  }
+
+  .date {
+    font-size: 15px;
+  }
+
+  .movie-description {
+    font-size: 13px;
+  }
+
+  .swipe-hint {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .swipe-hint span {
+    font-size: 15px;
+    margin: 0 10px;
+  }
+
+  /* Movie modal */
+
+  .movie-modal {
+    padding: 10px;
+  }
+
+  .movie-window {
+    width: 100%;
+    height: 90vh;
+    min-height: 0;
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+
+  .movie-back {
+    top: 20px;
+    left: 15px;
+    font-size: 12px;
+  }
+
+  .back-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+  }
+
+  .movie-close {
+    top: 15px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+  }
+
+  .movie-details {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 70px 20px 30px;
+  }
+
+  .movie-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .movie-text h1 {
+    font-size: 28px;
+  }
+
+  .movie-stars {
+    font-size: 22px;
+  }
+
+  .movie-summary {
+    font-size: 13px;
+  }
+
+  .featured-poster {
+    width: 110px;
+    max-width: 110px;
+    justify-self: auto;
+  }
+
+  .movie-details .movie-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: static;
+  }
+
+  .watchlist-btn,
+  .watch-now-btn {
+    padding: 0 14px;
+    font-size: 12px;
+  }
+
+  .bottom-part {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Burger menu - hidden on desktop */
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  background: #21242d;
+  border: 1px solid #ffffff1a;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: #f8b319;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    opacity: 0.6;
+  }
+  .burger-menu:hover {
+    opacity: 1;
+  }
+
+  .sidebar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100vh;
+    max-width: 260px;
+    margin: 0;
+    padding: 70px 20px 30px;
+    background-color: #17191f;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-logo {
+    padding: 15px 10px 30px;
+  }
+
+  .sidebar-content {
+    gap: 35px;
+  }
+
+  .sidebar-menu,
+  .sidebar-library,
+  .sidebar-general {
+    padding-left: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Burger animation */
+
+  .burger-menu.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .burger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
 }
